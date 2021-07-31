@@ -1,5 +1,6 @@
 import turtle
 
+
 def escalier(taille, nb):
     for i in range(0, nb):
         t.forward(taille)
@@ -9,10 +10,22 @@ def escalier(taille, nb):
     t.forward(taille)
 
 
-# 5 marches de 30*30px
-nb_marche = input("combien de marche ? ")
-taille_marche = input("quelle taille de marche ?")
+def carre(taille):
+    for i in range(0, 4):
+        t.forward(taille)
+        t.left(90)
+
+
+def carres(taille_depart, nb):
+    # taille du carré = i+1 * taille_depart
+    for i in range(0, nb):
+        carre((i+1)*taille_depart)
+
+
+cote = input("taille du cote : ")
+nb_carres = input("nombre de carré : ")
+
 t = turtle.Turtle()
-escalier(int(taille_marche), int(nb_marche))
+carres(int(cote), int(nb_carres))
 
 turtle.done()
