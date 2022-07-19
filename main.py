@@ -1,6 +1,6 @@
 import turtle
 
-
+#je modifie
 def escalier(taille, nb):
     for i in range(0, nb):
         t.forward(taille)
